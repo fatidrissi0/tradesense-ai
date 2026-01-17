@@ -1,0 +1,72 @@
+{
+  "navbar": {
+    "title": "TradeSense",
+    "login": "Login",
+    "register": "Register",
+    "dashboard": "Dashboard",
+    "leaderboard": "Leaderboard",
+    "logout": "Logout",
+    "greeting": "Hello, {{username}}",
+    "theme_light": "Light",
+    "theme_dark": "Dark"
+  },
+  "landing": {
+    "hero_title": "The First AI-Assisted Prop Firm for Africa",
+    "hero_subtitle": "Join the trading revolution. TradeSense AI provides the tools, capital, and artificial intelligence to succeed in the financial markets.",
+    "cta_start": "Start the Challenge",
+    "cta_learn": "Learn More",
+    "pricing_title": "Choose Your Challenge",
+    "choose_plan": "Choose this plan",
+    "features": {
+      "trading_title": "AI Trading",
+      "trading_desc": "Smart signals to optimize entries and exits.",
+      "news_title": "News Hub",
+      "news_desc": "Market-moving news in real time.",
+      "community_title": "Community",
+      "community_desc": "Learn with African traders and share ideas.",
+      "masterclass_title": "MasterClass",
+      "masterclass_desc": "Premium training to accelerate your progress."
+    }
+  },
+  "leaderboard": {
+    "title": "Top 10 Traders of the Month",
+    "updated": "The ranking is updated every minute.",
+    "rank": "Rank",
+    "username": "Username",
+    "profit": "Profit %",
+    "trades": "Total Trades",
+    "loading": "Loading leaderboard...",
+    "error": "Failed to fetch leaderboard."
+  },
+  "dashboard": {
+    "international": "International Symbols",
+    "morocco": "Morocco Symbols",
+    "live_updates": "Live • Updates every 30s",
+    "chart_title": "Trading Chart",
+    "chart_unavailable_maroc": "Chart not available for Morocco symbols for now.",
+    "chart_loading": "Loading chart for {{symbol}}...",
+    "loading_price": "Loading price...",
+    "ai_title": "AI Signals",
+    "confidence": "Confidence",
+    "risk_level": "Risk Level",
+    "signal_note": "AI signals are suggestions only",
+    "loading_signal": "Loading signal...",
+    "challenge_title": "Challenge Stats",
+    "loading_stats": "Loading stats...",
+    "initial_balance": "Initial Balance",
+    "current_balance": "Current Balance",
+    "pl": "P/L",
+    "target": "Target",
+    "max_daily_loss": "Max Daily Loss",
+    "max_total_loss": "Max Total Loss",
+    "quantity": "Quantity",
+    "total": "Total",
+    "buy": "Buy",
+    "sell": "Sell",
+    "approaching_max_loss": "Approaching max loss!",
+    "profit_target_reached": "Profit target reached!",
+    "challenge_status": "Challenge Status",
+    "dismiss": "Dismiss",
+    "no_challenge": "No active challenge. Buy a plan in Checkout to enable trading."
+  }
+}

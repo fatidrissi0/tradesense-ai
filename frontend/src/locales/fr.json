@@ -1,0 +1,72 @@
+{
+  "navbar": {
+    "title": "TradeSense",
+    "login": "Connexion",
+    "register": "Inscription",
+    "dashboard": "Dashboard",
+    "leaderboard": "Leaderboard",
+    "logout": "Déconnexion",
+    "greeting": "Bonjour, {{username}}",
+    "theme_light": "Clair",
+    "theme_dark": "Sombre"
+  },
+  "landing": {
+    "hero_title": "La Première Prop Firm Assistée par IA pour l'Afrique",
+    "hero_subtitle": "Rejoignez la révolution du trading. TradeSense AI vous donne les outils, le capital et l'intelligence artificielle pour réussir sur les marchés financiers.",
+    "cta_start": "Commencer le Challenge",
+    "cta_learn": "En savoir plus",
+    "pricing_title": "Choisissez Votre Challenge",
+    "choose_plan": "Choisir ce plan",
+    "features": {
+      "trading_title": "Trading IA",
+      "trading_desc": "Signalisation intelligente pour optimiser vos entrées et sorties.",
+      "news_title": "News Hub",
+      "news_desc": "Les actualités qui impactent vos positions en temps réel.",
+      "community_title": "Communauté",
+      "community_desc": "Apprenez avec des traders africains et partagez vos idées.",
+      "masterclass_title": "MasterClass",
+      "masterclass_desc": "Formations premium pour accélérer votre progression."
+    }
+  },
+  "leaderboard": {
+    "title": "Top 10 Traders du Mois",
+    "updated": "Le classement est mis à jour toutes les minutes.",
+    "rank": "Rank",
+    "username": "Username",
+    "profit": "Profit %",
+    "trades": "Total Trades",
+    "loading": "Chargement du classement...",
+    "error": "Impossible de récupérer le classement."
+  },
+  "dashboard": {
+    "international": "Symboles Internationaux",
+    "morocco": "Symboles Maroc",
+    "live_updates": "Live • Mises à jour toutes les 30s",
+    "chart_title": "Trading Chart",
+    "chart_unavailable_maroc": "Graphique non disponible pour les symboles Maroc pour l'instant.",
+    "chart_loading": "Chargement du graphique pour {{symbol}}...",
+    "loading_price": "Chargement du prix...",
+    "ai_title": "Signaux IA",
+    "confidence": "Confiance",
+    "risk_level": "Niveau de risque",
+    "signal_note": "Les signaux IA sont des suggestions uniquement",
+    "loading_signal": "Chargement du signal...",
+    "challenge_title": "Statistiques du Challenge",
+    "loading_stats": "Chargement des statistiques...",
+    "initial_balance": "Solde initial",
+    "current_balance": "Solde actuel",
+    "pl": "P/L",
+    "target": "Objectif",
+    "max_daily_loss": "Perte journalière max",
+    "max_total_loss": "Perte totale max",
+    "quantity": "Quantité",
+    "total": "Total",
+    "buy": "Acheter",
+    "sell": "Vendre",
+    "approaching_max_loss": "Approche de la perte maximale !",
+    "profit_target_reached": "Objectif de profit atteint !",
+    "challenge_status": "Statut du challenge",
+    "dismiss": "Fermer",
+    "no_challenge": "Aucun challenge actif. Achetez un plan dans la page Checkout pour activer le trading."
+  }
+}
