@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL || 'https://fatimazahra2.pythonanywhere.com';
+const API_URL = import.meta.env.VITE_API_URL;
 
 const api = axios.create({
   baseURL: API_URL,
@@ -30,33 +30,33 @@ api.interceptors.response.use(
 );
 
 export const authAPI = {
-  register: (data: any) => api.post('/auth/register', data),
-  login: (data: any) => api.post('/auth/login', data),
-  getCurrentUser: () => api.get('/auth/me'),
+  register: (data: any) => api.post('/api/auth/register', data),
+  login: (data: any) => api.post('/api/auth/login', data),
+  getCurrentUser: () => api.get('/api/auth/me'),
 };
 
 export const paymentAPI = {
-  getPlans: () => api.get('/payment/plans'),
-  checkout: (data: any) => api.post('/payment/checkout', data),
-  getHistory: () => api.get('/payment/history'),
+  getPlans: () => api.get('/api/payment/plans'),
+  checkout: (data: any) => api.post('/api/payment/checkout', data),
+  getHistory: () => api.get('/api/payment/history'),
 };
 
 export const tradingAPI = {
-  getActiveChallenge: () => api.get('/challenges/active'),
-  executeTrade: (data: any) => api.post('/trades/execute', data),
-  getTradeHistory: () => api.get('/trades/history'),
+  getActiveChallenge: () => api.get('/api/challenges/active'),
+  executeTrade: (data: any) => api.post('/api/trades/execute', data),
+  getTradeHistory: () => api.get('/api/trades/history'),
 };
 
 export const marketAPI = {
-  getLivePrice: (symbol: string) => api.get(`/market/live/${symbol}`),
-  getChartData: (symbol: string) => api.get(`/market/chart/${symbol}`),
-  getMoroccoStock: (ticker: string) => api.get(`/market/morocco/${ticker}`),
-  getSignal: (symbol: string) => api.get(`/signals/${symbol}`),
-  getMoroccoSignal: (ticker: string) => api.get(`/signals/morocco/${ticker}`),
+  getLivePrice: (symbol: string) => api.get(`/api/market/live/${symbol}`),
+  getChartData: (symbol: string) => api.get(`/api/market/chart/${symbol}`),
+  getMoroccoStock: (ticker: string) => api.get(`/api/market/morocco/${ticker}`),
+  getSignal: (symbol: string) => api.get(`/api/signals/${symbol}`),
+  getMoroccoSignal: (ticker: string) => api.get(`/api/signals/morocco/${ticker}`),
 };
 
 export const leaderboardAPI = {
-  getMonthly: () => api.get('/leaderboard/monthly'),
+  getMonthly: () => api.get('/api/leaderboard/monthly'),
 };
 
 // Export the axios instance as well for flexibility
