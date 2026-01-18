@@ -16,8 +16,11 @@ def create_app(config_name='default'):
     app = Flask(__name__)
     app.config.from_object(config[config_name])
 
-    CORS(app, resources={r"/api/*": {"origins": "*" }},
-    supports_credentials=True)
+    CORS(app, resources={r"/api/*": {"origins": "https://tradesense-ai.vercel.app"
+    }},
+    allow_headers=["Content-Type", "Authorization"],
+    methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    supports_credentials=False)
 
     # ✅ Preflight OPTIONS handler (CRUCIAL)
     @app.before_request
