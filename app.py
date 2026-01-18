@@ -16,7 +16,7 @@ def create_app(config_name='default'):
     app = Flask(__name__)
     app.config.from_object(config[config_name])
 
-    CORS(app, resources={r"/api/*": {"origins": ["http://localhost:3000", "http://localhost:5173", "http://localhost:5174", "http://localhost:5175"]}})
+    CORS(app, resources={r"/api/*": {"origins": ["http://localhost:3000", "http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "https://tradesense-ai.netlify.app"]}})
     JWTManager(app)
     db.init_app(app)
 
