@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from config import config
@@ -16,7 +16,23 @@ def create_app(config_name='default'):
     app = Flask(__name__)
     app.config.from_object(config[config_name])
 
-    CORS(app, resources={r"/api/*": {"origins": ["http://localhost:3000", "http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "https://tradesense-ai.netlify.app"]}})
+    CORS(app, resources={r"/api/*": {"origins": "https://tradesense-ai.vercel.app"
+    }},
+    allow_headers=["Content-Type", "Authorization"],
+    methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    supports_credentials=False)
+
+    # ✅ Preflight OPTIONS handler (CRUCIAL)
+    @app.before_request
+    def handle_preflight():
+        if request.method == "OPTIONS":
+            response = jsonify({"message": "preflight ok"})
+            response.headers.add("Access-Control-Allow-Origin", "*")
+            response.headers.add("Access-Control-Allow-Headers", "Content-Type,Authorization")
+            response.headers.add("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS")
+            return response, 200
+
+>>>>>>> 1fa9a44fa047128e3542e8d0c716523a280d356f
     JWTManager(app)
     db.init_app(app)
 

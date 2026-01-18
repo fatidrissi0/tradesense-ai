@@ -3,6 +3,10 @@ from flask_jwt_extended import jwt_required, get_jwt_identity, create_access_tok
 from models import db, User
 from datetime import datetime
 import uuid
+import logging
+from flask import current_app
+
+logging.basicConfig(level=logging.DEBUG)
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -47,7 +51,7 @@ def register():
         }), 201
         
     except Exception as e:
-        db.session.rollback()
+        current_app.logger.exception("Erreur register")
         return jsonify({'error': 'Erreur lors de l\'inscription'}), 400
 
 @auth_bp.route('/api/auth/login', methods=['POST'])
@@ -75,9 +79,11 @@ def login():
             'access_token': access_token,
             'user': user.to_dict()
         }), 200
-        
-    except Exception as e:
+            
+    except Exception as e: 
+        current_app.logger.exception("Erreur login")
         return jsonify({'error': 'Erreur lors de la connexion'}), 400
+
 
 @auth_bp.route('/api/auth/me', methods=['GET'])
 @jwt_required()
@@ -94,7 +100,8 @@ def get_current_user():
         }), 200
         
     except Exception as e:
-        return jsonify({'error': 'Erreur lors de la récupération de l\'utilisateur'}), 400
+        current_app.logger.exception("Erreur register")
+        return jsonify({'error': 'Erreur lors de l\'inscription'}), 400
 
 @auth_bp.route('/api/auth/logout', methods=['POST'])
 @jwt_required()
@@ -104,4 +111,5 @@ def logout():
             'message': 'Déconnexion réussie'
         }), 200
     except Exception as e:
-        return jsonify({'error': 'Erreur lors de la déconnexion'}), 400
+        current_app.logger.exception("Erreur register")
+        return jsonify({'error': 'Erreur lors de l\'inscription'}), 400
