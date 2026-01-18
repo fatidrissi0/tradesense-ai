@@ -32,7 +32,6 @@ def create_app(config_name='default'):
             response.headers.add("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS")
             return response, 200
 
->>>>>>> 1fa9a44fa047128e3542e8d0c716523a280d356f
     JWTManager(app)
     db.init_app(app)
 
